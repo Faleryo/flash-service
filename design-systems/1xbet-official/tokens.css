@@ -1,0 +1,46 @@
+/* ══════════════════════════════════════════════
+   1xBet — Design System Officiel
+   Usage : importer ce fichier en premier dans <style>
+   ══════════════════════════════════════════════ */
+
+:root {
+
+  /* ── BACKGROUNDS 1xBet Corporate ── */
+  --dark:     #003087;   /* bleu corporate principal — nav, header, fond */
+  --dark-2:   #002070;   /* sections alternées */
+  --dark-3:   #01195a;   /* cartes, panels */
+  --dark-4:   #012880;   /* hover, bordures */
+  --light:    #fdfcf7;   /* réservé texte clair */
+
+  /* ── ACCENT ORANGE (bonus, code promo uniquement) ── */
+  --accent:       #f5a623;
+  --accent-dim:   rgba(245,166,35,.12);
+  --accent-mid:   rgba(245,166,35,.28);
+  --accent-glow:  rgba(245,166,35,.38);
+  --accent-dark:  #c47d00;
+
+  /* ── BLEU 1xBet (CTA interactif + corporate) ── */
+  --blue:            #1652f0;   /* bleu électrique — boutons CTA, liens */
+  --blue-corporate:  #003087;   /* bleu corporate — header, nav */
+  --blue-2:          #0d3fd1;   /* hover CTA */
+  --blue-dim:        rgba(22,82,240,.14);
+  --blue-mid:        rgba(22,82,240,.35);
+  --blue-glow:       rgba(22,82,240,.42);
+
+  /* ── VERT LIVE ── */
+  --green:      #00c853;
+  --green-dim:  rgba(0,200,83,.12);
+
+  /* ── NEUTRES ── */
+  --white: #ffffff;
+  --ink:   #ffffff;   /* texte principal (mode sombre) */
+
+  /* ── BORDER RADIUS ── */
+  --r-card: 18px;
+  --r-pill: 999px;
+
+  /* ── TYPOGRAPHIE ── */
+  --ff-display: 'Fraunces', serif;
+  --ff-ui:      'Syne', sans-serif;
+  --ff-mono:    'JetBrains Mono', monospace;
+}

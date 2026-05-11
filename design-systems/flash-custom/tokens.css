@@ -1,0 +1,45 @@
+/* ══════════════════════════════════════════════
+   FLASH SERVICE — Design System Custom
+   Usage : importer ce fichier en premier dans <style>
+   ══════════════════════════════════════════════ */
+
+:root {
+
+  /* ── BACKGROUNDS ── */
+  --dark:     #0d1b2a;   /* fond principal (navy sombre) */
+  --dark-2:   #0f2035;   /* sections alternées */
+  --dark-3:   #132844;   /* cartes, panels */
+  --dark-4:   #1a3350;   /* hover, bordures */
+  --light:    #fdfcf7;   /* réservé texte clair */
+
+  /* ── ACCENT ORANGE (bonus, code promo) ── */
+  --accent:       #f5a623;
+  --accent-dim:   rgba(245,166,35,.12);
+  --accent-mid:   rgba(245,166,35,.28);
+  --accent-glow:  rgba(245,166,35,.38);
+  --accent-dark:  #c47d00;
+
+  /* ── BLEU CTA (actions principales) ── */
+  --blue:       #1652f0;
+  --blue-2:     #0d3fd1;
+  --blue-dim:   rgba(22,82,240,.14);
+  --blue-mid:   rgba(22,82,240,.35);
+  --blue-glow:  rgba(22,82,240,.42);
+
+  /* ── VERT LIVE ── */
+  --green:      #00c853;
+  --green-dim:  rgba(0,200,83,.12);
+
+  /* ── NEUTRES ── */
+  --white: #ffffff;
+  --ink:   #ffffff;   /* couleur texte par défaut (mode sombre) */
+
+  /* ── BORDER RADIUS ── */
+  --r-card: 18px;
+  --r-pill: 999px;
+
+  /* ── TYPOGRAPHIE ── */
+  --ff-display: 'Fraunces', serif;
+  --ff-ui:      'Syne', sans-serif;
+  --ff-mono:    'JetBrains Mono', monospace;
+}
