@@ -28,6 +28,7 @@ fi
 # 3. Permissions
 chown -R www-data:www-data "$SITE_DIR"
 chmod -R 755 "$SITE_DIR"
+chmod 755 /var/www  # nginx doit pouvoir traverser le répertoire parent
 
 # 4. Config nginx
 cat > /etc/nginx/sites-available/flashservice.org <<'NGINX'
