@@ -1,46 +1,74 @@
 /* ══════════════════════════════════════════════
    1xBet — Design System Officiel
-   Usage : importer ce fichier en premier dans <style>
+   Extrait du CSS officiel de 1xbetmaroc.com
+   (genfiles/site-admin/colors/*.css — HSL d'origine)
+   Mode: clair (fond blanc, header bleu medium, CTA vert lime)
    ══════════════════════════════════════════════ */
 
 :root {
 
-  /* ── BACKGROUNDS 1xBet Corporate ── */
-  --dark:     #003087;   /* bleu corporate principal — nav, header, fond */
-  --dark-2:   #002070;   /* sections alternées */
-  --dark-3:   #01195a;   /* cartes, panels */
-  --dark-4:   #012880;   /* hover, bordures */
-  --light:    #fdfcf7;   /* réservé texte clair */
+  /* ── BLEU CORPORATE — header, nav, sections sombres ── */
+  --brand:        #266AA5;   /* hsl(208,62%,40%) — bleu header officiel */
+  --brand-2:      #2B77B9;   /* hsl(208,62%,45%) — sections */
+  --brand-3:      #3387D0;   /* hsl(208,63%,51%) — état hover/light */
+  --brand-deep:   #1C4268;   /* hsl(210,57%,26%) — séparateurs dark */
+  --brand-sep:    #4780B2;   /* hsl(208,43%,49%) — séparateurs sur bleu */
 
-  /* ── ACCENT ORANGE (bonus, code promo uniquement) ── */
+  /* ── BLEU ACTION — liens, états actifs, CTA bleu ── */
+  --blue:         #3DA4FF;   /* hsl(208,100%,62%) — bleu interactif */
+  --blue-strong:  #2193F6;   /* hsl(208,93%,55%) — hover */
+
+  /* ── VERT LIME — CTA principal (S'inscrire, Se connecter, Déposer) ── */
+  --green:        #92C638;   /* hsl(82,56%,50%) — CTA principal officiel */
+  --green-bright: #A6E240;   /* hsl(82,74%,57%) — highlight, badge LIVE */
+  --green-dim:    rgba(146,198,56,.14);
+  --green-mid:    rgba(146,198,56,.32);
+  --green-glow:   rgba(146,198,56,.45);
+
+  /* ── ORANGE — bonus, code promo, montants XOF (spécifique Flash Service) ── */
   --accent:       #f5a623;
   --accent-dim:   rgba(245,166,35,.12);
   --accent-mid:   rgba(245,166,35,.28);
   --accent-glow:  rgba(245,166,35,.38);
   --accent-dark:  #c47d00;
 
-  /* ── BLEU 1xBet (CTA interactif + corporate) ── */
-  --blue:            #1652f0;   /* bleu électrique — boutons CTA, liens */
-  --blue-corporate:  #003087;   /* bleu corporate — header, nav */
-  --blue-2:          #0d3fd1;   /* hover CTA */
-  --blue-dim:        rgba(22,82,240,.14);
-  --blue-mid:        rgba(22,82,240,.35);
-  --blue-glow:       rgba(22,82,240,.42);
+  /* ── ROUGE — erreur, perte ── */
+  --bad:          #FE5659;   /* hsl(359,100%,67%) */
+  --bad-dim:      rgba(254,86,89,.12);
 
-  /* ── VERT LIVE ── */
-  --green:      #00c853;
-  --green-dim:  rgba(0,200,83,.12);
+  /* ── SURFACES (mode clair) ── */
+  --bg:           #ffffff;   /* fond page */
+  --bg-2:         #f4f6f8;   /* sections alternées (gris très clair) */
+  --bg-3:         #ffffff;   /* cartes */
+  --bg-hover:     #eaeef2;   /* hover surface */
 
-  /* ── NEUTRES ── */
-  --white: #ffffff;
-  --ink:   #ffffff;   /* texte principal (mode sombre) */
+  /* ── TEXTE ── */
+  --ink:          #232323;   /* hsl(0,0%,14%) — texte principal */
+  --ink-2:        #5a6470;   /* texte secondaire */
+  --ink-mute:     #8a939e;   /* texte tertiaire / placeholder */
+  --on-brand:     #ffffff;   /* texte sur fond bleu */
+  --on-brand-dim: rgba(255,255,255,.72);
 
-  /* ── BORDER RADIUS ── */
-  --r-card: 18px;
-  --r-pill: 999px;
+  /* ── BORDURES ── */
+  --line:         #e3e7eb;   /* bordure légère sur fond clair */
+  --line-strong:  #c8cfd6;   /* bordure plus visible */
+
+  /* ── RAYONS ── */
+  --r-card:       8px;       /* radius officiel 1xbet */
+  --r-pill:       999px;
+  --r-input:      8px;
+
+  /* ── ESPACEMENT 1xbet ── */
+  --gutter:       0.5rem;
+  --gap:          8px;
 
   /* ── TYPOGRAPHIE ── */
-  --ff-display: 'Fraunces', serif;
-  --ff-ui:      'Syne', sans-serif;
-  --ff-mono:    'JetBrains Mono', monospace;
+  --ff-display:   'Inter', system-ui, -apple-system, sans-serif;
+  --ff-ui:        'Inter', system-ui, -apple-system, sans-serif;
+  --ff-mono:      'JetBrains Mono', ui-monospace, monospace;
+
+  /* ── OMBRES ── */
+  --shadow-sm:    0 1px 2px rgba(0,0,0,.06);
+  --shadow:       0 2px 8px rgba(0,0,0,.08);
+  --shadow-lg:    0 8px 28px rgba(0,0,0,.12);
 }

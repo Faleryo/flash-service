@@ -1,7 +1,9 @@
-# 1xBet — Design System Officiel
+# 1xBet — Design System Officiel (v2)
 
-Système de design basé sur l'identité visuelle officielle de la plateforme 1xBet.  
-Appliqué sur le site Flash Service (agent officiel 1xBet Togo, code promo CMD10).
+Tokens extraits directement du CSS officiel de **1xbetmaroc.com**
+(`https://v3.traincdn.com/genfiles/site-admin/colors/*.css`).
+
+Mode **clair**, fond blanc, header bleu medium, **CTA vert lime** — l'identité authentique 1xBet.
 
 ---
 
@@ -9,105 +11,116 @@ Appliqué sur le site Flash Service (agent officiel 1xBet Togo, code promo CMD10
 
 | Fichier | Usage |
 |---|---|
-| `tokens.css` | Variables CSS à importer dans `<style>` ou `<link>` |
-| `tokens.json` | Tokens au format Design Tokens Community Group |
+| `tokens.css` | Variables CSS à importer ou copier dans `<style>` |
+| `tokens.json` | Format Design Tokens Community Group |
 | `README.md` | Ce fichier |
 
-## Comment l'utiliser
-
 ```html
-<!-- Option 1 : lien externe -->
 <link rel="stylesheet" href="design-systems/1xbet-official/tokens.css">
-
-<!-- Option 2 : copier-coller le contenu de tokens.css dans votre <style> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 ```
 
 ---
 
 ## Palette
 
-### Fonds — Bleu Corporate 1xBet
+### Bleu corporate — header, nav, sections sombres
 
-> `#003087` est la couleur signature 1xBet. Elle apparaît sur leur header, nav, et fond des pages principales.
+| Token | Hex | HSL d'origine | Usage |
+|---|---|---|---|
+| `--brand` | `#266AA5` | hsl(208,62%,40%) | **Header principal, nav** |
+| `--brand-2` | `#2B77B9` | hsl(208,62%,45%) | Sections, panels |
+| `--brand-3` | `#3387D0` | hsl(208,63%,51%) | Hover, état clair |
+| `--brand-deep` | `#1C4268` | hsl(210,57%,26%) | Bordures sombres |
+| `--brand-sep` | `#4780B2` | hsl(208,43%,49%) | Séparateurs sur fond bleu |
 
-| Token CSS | Valeur | Description |
+### Bleu action — liens, actifs
+
+| Token | Hex | Usage |
 |---|---|---|
-| `--dark` | `#003087` | **Bleu corporate 1xBet** — fond principal |
-| `--dark-2` | `#002070` | Sections alternées (légèrement plus sombre) |
-| `--dark-3` | `#01195a` | Cartes, panels |
-| `--dark-4` | `#012880` | Hover, bordures actives |
-| `--light` | `#fdfcf7` | Réservé |
+| `--blue` | `#3DA4FF` | Liens, états actifs, tabs sélectionnés |
+| `--blue-strong` | `#2193F6` | Hover |
 
-### Orange — Bonus / Promotions
+### Vert lime — **CTA principal officiel**
 
-> Réservé aux éléments liés aux bonus : code promo CMD10, montants XOF, badges promotion.  
-> **Ne jamais utiliser sur les boutons CTA.**
+> C'est **LE** vert 1xBet, présent sur tous les CTA ("S'inscrire", "Se connecter", "Déposer").
 
-| Token CSS | Valeur | Description |
+| Token | Hex | Usage |
 |---|---|---|
-| `--accent` | `#f5a623` | Orange — bonus, code promo, highlights |
-| `--accent-dim` | `rgba(245,166,35,.12)` | Fond badge transparent |
-| `--accent-mid` | `rgba(245,166,35,.28)` | Bordure, séparateur |
-| `--accent-glow` | `rgba(245,166,35,.38)` | Box-shadow glow |
-| `--accent-dark` | `#c47d00` | Orange texte sur fond clair |
+| `--green` | `#92C638` | **Bouton CTA principal** |
+| `--green-bright` | `#A6E240` | Badge LIVE, highlight |
+| `--green-dim` / `-mid` / `-glow` | rgba | Fonds, bordures, glow |
 
-### Bleu — Actions / CTA Interactifs
+### Orange — bonus / code promo (spécifique Flash Service)
 
-> Deux niveaux de bleu : `#1652f0` pour les boutons interactifs, `#003087` pour les structures (même que `--dark`).
+> Réservé aux montants XOF, code CMD10, badges promo. **Ne jamais sur les CTA.**
 
-| Token CSS | Valeur | Description |
+| Token | Hex | Usage |
 |---|---|---|
-| `--blue` | `#1652f0` | **Bleu électrique** — CTA principal, boutons, liens actifs |
-| `--blue-corporate` | `#003087` | Bleu corporate — header, nav |
-| `--blue-2` | `#0d3fd1` | Hover des boutons CTA |
-| `--blue-dim` | `rgba(22,82,240,.14)` | Fond bleu transparent |
-| `--blue-mid` | `rgba(22,82,240,.35)` | Bordure bleue |
-| `--blue-glow` | `rgba(22,82,240,.42)` | Box-shadow glow bleu |
+| `--accent` | `#f5a623` | Code promo, montants bonus |
+| `--accent-dark` | `#c47d00` | Orange foncé sur fond clair |
 
-### Vert — Live / Succès
+### Surfaces & texte (mode clair)
 
-| Token CSS | Valeur | Description |
+| Token | Hex | Usage |
 |---|---|---|
-| `--green` | `#00c853` | Badge LIVE, gains, validation |
-| `--green-dim` | `rgba(0,200,83,.12)` | Fond transparent vert |
+| `--bg` | `#ffffff` | Fond page |
+| `--bg-2` | `#f4f6f8` | Sections alternées |
+| `--bg-hover` | `#eaeef2` | Hover surface |
+| `--ink` | `#232323` | Texte principal |
+| `--ink-2` | `#5a6470` | Texte secondaire |
+| `--ink-mute` | `#8a939e` | Placeholder, tertiaire |
+| `--on-brand` | `#ffffff` | Texte sur header bleu |
+| `--line` | `#e3e7eb` | Bordure légère |
+| `--line-strong` | `#c8cfd6` | Bordure visible |
 
 ---
 
 ## Typographie
 
-| Token CSS | Valeur | Usage |
+| Token | Valeur | Usage |
 |---|---|---|
-| `--ff-display` | `'Fraunces', serif` | Titres héro, sections — italique bold |
-| `--ff-ui` | `'Syne', sans-serif` | Corps, boutons, labels |
-| `--ff-mono` | `'JetBrains Mono', monospace` | Chiffres, cotes, codes |
+| `--ff-ui` / `--ff-display` | `'Inter', system-ui, sans-serif` | **Toute la UI** |
+| `--ff-mono` | `'JetBrains Mono', ui-monospace, monospace` | Chiffres, cotes |
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,700;1,9..144,900&family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 ```
 
 ---
 
-## Règles d'usage 1xBet
+## Rayons & espacement
 
-| Situation | Couleur à utiliser |
-|---|---|
-| Fond de page / header | `--dark` (`#003087`) |
-| Bouton principal "S'inscrire", "Déposer" | `--blue` (`#1652f0`) |
-| Code promo, montant bonus | `--accent` (`#f5a623`) |
-| Badge LIVE, score en cours | `--green` (`#00c853`) |
-| Texte secondaire | `rgba(255,255,255,.50)` |
-| Bordures subtiles | `rgba(255,255,255,.08)` |
+| Token | Valeur | Usage |
+|---|---|---|
+| `--r-card` | `8px` | **Cartes, inputs, boutons** (officiel 1xBet) |
+| `--r-pill` | `999px` | Pastilles, tags |
+| `--gap` | `8px` | Gap entre éléments |
+| `--gutter` | `0.5rem` | Padding latéral |
 
 ---
 
-## Différences avec Flash Custom
+## Règles d'usage
 
-| Token | Flash Custom | 1xBet Officiel |
-|---|---|---|
-| `--dark` | `#0d1b2a` (navy sombre) | `#003087` (bleu corporate) |
-| `--dark-2` | `#0f2035` | `#002070` |
-| `--dark-3` | `#132844` | `#01195a` |
-| `--dark-4` | `#1a3350` | `#012880` |
-| `--blue-corporate` | *(absent)* | `#003087` |
-| Typo | Fraunces + Syne + JetBrains | Identique |
-| Orange accent | Identique | Identique |
+| Situation | Token |
+|---|---|
+| Header / top nav | `--brand` (#266AA5) |
+| Fond de page body | `--bg` (#ffffff) |
+| Section alternée | `--bg-2` (#f4f6f8) |
+| **Bouton "S'inscrire" / "Se connecter" / "Déposer"** | `--green` (#92C638) |
+| Lien actif, tab sélectionnée | `--blue` (#3DA4FF) |
+| Code promo CMD10 / montant XOF | `--accent` (#f5a623) |
+| Badge LIVE | `--green-bright` (#A6E240) |
+| Erreur / perte | `--bad` (#FE5659) |
+| Texte principal | `--ink` (#232323) |
+| Texte secondaire | `--ink-2` (#5a6470) |
+
+---
+
+## Source
+
+Tokens vérifiés contre :
+- `https://v3.traincdn.com/genfiles/site-admin/colors/5d97f18506df3cab94f6f536a1981da4.css`
+- `https://v3.traincdn.com/genfiles/site-admin/css_vars/06c9b68c4f5819c83cc220a9024bbee1.css`
+- Captures écran `1xbetmaroc.com/fr/user/login` (login + menu mobile)
