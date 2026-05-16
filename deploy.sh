@@ -16,9 +16,10 @@ apt-get update -qq
 apt-get install -y nginx git certbot python3-certbot-nginx
 
 # 2. Clonage du repo
+git config --global --add safe.directory "$SITE_DIR"
 if [ -d "$SITE_DIR" ]; then
   echo "Mise à jour du repo existant..."
-  cd "$SITE_DIR" && git pull origin main
+  git -C "$SITE_DIR" pull origin main
 else
   echo "Clonage du repo..."
   git clone "$REPO_URL" "$SITE_DIR"
