@@ -147,7 +147,7 @@ const V4Mobile = ({ promo, bonusMax, sections }) => (
                     <div style={{ width: 18, height: 18, borderRadius: '50%', background: HF.accDim, border: `1px solid ${HF.accMid}`, display: 'grid', placeItems: 'center', flexShrink: 0 }}>
                       <span style={{ fontFamily: HF.ffM, fontSize: 9, fontWeight: 700, color: HF.acc }}>✓</span>
                     </div>
-                    <span style={{ fontFamily: HF.ff, fontSize: 13, color: 'rgba(253,252,247,.7)', lineHeight: 1.4 }}>{t}</span>
+                    <span style={{ fontFamily: HF.ff, fontSize: 13, color: HF.light, lineHeight: 1.4 }}>{t}</span>
                   </div>
                 ))}
               </div>
