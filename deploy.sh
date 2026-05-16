@@ -33,7 +33,7 @@ cat > /etc/nginx/sites-available/flashservice.org <<'NGINX'
 server {
     listen 80;
     listen [::]:80;
-    server_name flashservice.org www.flashservice.org;
+    server_name flashservice.org;
 
     root /var/www/flashservice;
     index index.html;
@@ -72,7 +72,7 @@ echo ""
 echo "=== Site HTTP en ligne : http://$DOMAIN ==="
 echo ""
 echo "=== Installation du certificat SSL (HTTPS) ==="
-certbot --nginx -d "$DOMAIN" -d "www.$DOMAIN" --non-interactive --agree-tos --redirect -m admin@flashservice.org
+certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos --redirect -m admin@flashservice.org
 
 echo ""
 echo "=== Terminé ! Site disponible sur https://$DOMAIN ==="
