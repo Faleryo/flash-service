@@ -5,7 +5,7 @@
 
 set -e
 
-DOMAIN="flashservice.org"
+DOMAIN="1-xbet-codepromo.net"
 SITE_DIR="/var/www/flashservice"
 REPO_URL="https://github.com/Faleryo/flash-service.git"
 
@@ -31,11 +31,11 @@ chmod -R 755 "$SITE_DIR"
 chmod 755 /var/www  # nginx doit pouvoir traverser le répertoire parent
 
 # 4. Config nginx
-cat > /etc/nginx/sites-available/flashservice.org <<'NGINX'
+cat > /etc/nginx/sites-available/1-xbet-codepromo.net <<'NGINX'
 server {
     listen 80;
     listen [::]:80;
-    server_name flashservice.org;
+    server_name 1-xbet-codepromo.net;
 
     root /var/www/flashservice;
     index index.html;
@@ -64,7 +64,7 @@ server {
 NGINX
 
 # 5. Activer le site
-ln -sf /etc/nginx/sites-available/flashservice.org /etc/nginx/sites-enabled/
+ln -sf /etc/nginx/sites-available/1-xbet-codepromo.net /etc/nginx/sites-enabled/
 rm -f /etc/nginx/sites-enabled/default
 
 # 6. Test et reload nginx
@@ -74,7 +74,7 @@ echo ""
 echo "=== Site HTTP en ligne : http://$DOMAIN ==="
 echo ""
 echo "=== Installation du certificat SSL (HTTPS) ==="
-certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos --redirect -m admin@flashservice.org
+certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos --redirect -m admin@1-xbet-codepromo.net
 
 echo ""
 echo "=== Terminé ! Site disponible sur https://$DOMAIN ==="

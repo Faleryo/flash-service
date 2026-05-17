@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://flashservice.org/sitemap.xml
+Sitemap: https://1-xbet-codepromo.net/sitemap.xml
